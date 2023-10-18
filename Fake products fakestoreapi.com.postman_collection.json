@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "3b87454f-144c-402c-9132-e4bc08e043a4",
+		"name": "Fake products fakestoreapi.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23231932",
+		"_collection_link": "https://warped-spaceship-157325.postman.co/workspace/Team-Workspace~5dbed08b-fba8-46ff-85e3-06896d102a7a/collection/23231932-3b87454f-144c-402c-9132-e4bc08e043a4?action=share&source=collection_link&creator=23231932"
+	},
+	"item": [
+		{
+			"name": "products all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://fakestoreapi.com/products"
+			},
+			"response": []
+		},
+		{
+			"name": "products by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://fakestoreapi.com/products/10"
+			},
+			"response": []
+		},
+		{
+			"name": "products limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/products?limit=5",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products sort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/products?sort=asc",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://fakestoreapi.com/products/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "products in category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://fakestoreapi.com/products/category/jewelery"
+			},
+			"response": []
+		},
+		{
+			"name": "products add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Test add eproduct\",\r\n    \"price\" : 13.5,\r\n    \"description\" : \"lorem ipsum set\",\r\n    \"image\" : \"https://i.pravatar.cc\",\r\n    \"category\" : \"electronic\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://fakestoreapi.com/products"
+			},
+			"response": []
+		},
+		{
+			"name": "products update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Test add eproduct\",\r\n    \"price\" : 13.5,\r\n    \"description\" : \"lorem ipsum set\",\r\n    \"image\" : \"https://i.pravatar.cc\",\r\n    \"category\" : \"electronic\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://fakestoreapi.com/products/7"
+			},
+			"response": []
+		},
+		{
+			"name": "products delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://fakestoreapi.com/products/21"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "c35ce6ff-3d15-4260-840b-17557ced30ba",
+		"name": "Fake users by melivecode.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23231932",
+		"_collection_link": "https://warped-spaceship-157325.postman.co/workspace/Team-Workspace~5dbed08b-fba8-46ff-85e3-06896d102a7a/collection/23231932-c35ce6ff-3d15-4260-840b-17557ced30ba?action=share&source=collection_link&creator=23231932"
+	},
+	"item": [
+		{
+			"name": "users all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://www.melivecode.com/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "users search name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.melivecode.com/api/users?search=ka",
+					"protocol": "https",
+					"host": [
+						"www",
+						"melivecode",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "ka"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://www.melivecode.com/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "users create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fname\": \"Ca2t\",\r\n  \"lname\": \"Chat2\",\r\n  \"username\": \"ca2t.chat@melivecode.com\",\r\n  \"password\": \"1234\",\r\n  \"email\": \"cat.ch2at@melivecode.com\",\r\n  \"avatar\": \"https://www.melivecode.com/users/cat.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://www.melivecode.com/api/users/create"
+			},
+			"response": []
+		},
+		{
+			"name": "users update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 13,\r\n  \"email\" : \"test@chon.go.th\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://www.melivecode.com/api/users/update"
+			},
+			"response": []
+		},
+		{
+			"name": "users delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 13\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://www.melivecode.com/api/users/delete"
+			},
+			"response": []
+		},
+		{
+			"name": "users login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJlbWFpbCI6fdqweqwewqeInN0cmVldG51a2VyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic3RyZWV0bnVrZXIiLCJpYXQiOjE2OTU3MTg2MTEsImV4cCI6MTY5NTgwNTAxMX0.i02cnnpXlk8qKMIT6B2dtj8AwGNylTvlGC4xZuHIsyM"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"karn.yong@melivecode.com\",\r\n  \"password\": \"melivecode\",\r\n  \"expiresIn\": 60000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://www.melivecode.com/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "users auth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imthcm4ueW9uZ0BtZWxpdmVjb2RlLmNvbSIsImlhdCI6MTY5NzU5Nzg4MywiZXhwIjoxNjk3NTk3OTQzfQ.VCNvgNmKVIigs3YXIIzWVmjzvN3VGjavnk3zFtRukXU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://www.melivecode.com/api/auth/user"
+			},
+			"response": []
+		}
+	]
+}
